@@ -5,8 +5,6 @@ from utils.util import max_res
 from models.user import User
 import datetime
 
-# current_userid = get_jwt_identity()
-
 
 class UserinfoResource(Resource):
     @jwt_required
