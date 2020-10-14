@@ -28,10 +28,12 @@ for ex in default_exceptions:
 
 from resourses.users_resource import UsersResource
 from resourses.session.login_resource import LoginResource
+from resourses.session.userinfo_resource import UserinfoResource
  
 
 api.prefix = '/api'
 api.add_resource(LoginResource, '/auth/login')
+api.add_resource(UserinfoResource, '/auth/userinfo')
 api.add_resource(UsersResource, '/users', '/users/<int:user_id>')
 
 if __name__ == '__main__':
