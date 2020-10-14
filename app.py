@@ -27,7 +27,11 @@ for ex in default_exceptions:
     app.register_error_handler(ex, handle_error)
 
 from resourses.users_resource import UsersResource
+from resourses.session.login_resource import LoginResource
+ 
+
 api.prefix = '/api'
+api.add_resource(LoginResource, '/auth/login')
 api.add_resource(UsersResource, '/users', '/users/<int:user_id>')
 
 if __name__ == '__main__':
