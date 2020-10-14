@@ -1,6 +1,6 @@
 from sqlalchemy import ForeignKey, func
-from app import db
-from base_model import BaseModel
+from app import bcrypt, db
+from .base_model import BaseModel
 
 
 class User(BaseModel):

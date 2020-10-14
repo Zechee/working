@@ -1,10 +1,10 @@
 from app import api
 
-# from resourses.workers_resource import WorkersResource
-# api.add_resource(WorkersResource, '/workers', '/workers/<int:worker_id>')
+from resourses.users_resource import UsersResource
+api.add_resource(UsersResource, '/users', '/uers/<int:user_id>')
 
-# from resourses.workinglogs_resource import WorkinglogsResource
-# api.add_resource(WorkinglogsResource, '/workinglogs', '/workinglogs/<int:workinglog_id>')
+from resourses.logs_resource import LogsResource
+api.add_resource(LogsResource, '/logs', '/logs/<int:workinglog_id>')
 
-# from resourses.workingitems_resource import WorkingitemsResource
-# api.add_resource(WorkingitemsResource, '/workingitems', '/workingitems/<int:workingitem_id>')
+from resourses.Logitems_resource import LogitemsResource
+api.add_resource(LogitemsResource, '/logitems', '/logitems/<int:logitem_id>')

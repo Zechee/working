@@ -22,28 +22,13 @@ migrate = Migrate(app, db)
 jwt = JWTManager(app)
 bcrypt.init_app(app)
 
-# from utils.error_handle import *
-# for ex in default_exceptions:
-#     app.register_error_handler(ex, handle_error)
+from utils.error_handle import *
+for ex in default_exceptions:
+    app.register_error_handler(ex, handle_error)
 
-
-
-# from resourses.users_resource import UsersResource
-# from resourses.session.login_resource import LoginResource
-# from resourses.session.userinfo_resource import UserinfoResource
-
-# from upload import upload_file
-# from front import hi
-
-# front
-# api.prefix = '/api/v1/'
-
+from resourses.users_resource import UsersResource
 api.prefix = '/api'
-# api.add_resource(LoginResource, '/auth/login')
-# api.add_resource(UserinfoResource, '/auth/userinfo')
-# api.add_resource(UsersResource, '/users', '/users/<int:user_id>')
-
-#from routers import api
+api.add_resource(UsersResource, '/users', '/users/<int:user_id>')
 
 if __name__ == '__main__':
     app.run()
