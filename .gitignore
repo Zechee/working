@@ -1,8 +1,8 @@
-.DS_Store
-.ipynb_checkpoints
-__pycache__
-.idea
-*.pyc
-/dist/
-/*.egg-info
+*__pycache__/
+.vscode/
+migrations/
+*.db
+uploads/
+*venv/
 .vscode
+app.pid
