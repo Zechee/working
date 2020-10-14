@@ -5,7 +5,7 @@ from utils.util import max_res
 from models.user import User
 import datetime
 
-current_userid = get_jwt_identity()
+# current_userid = get_jwt_identity()
 
 
 class UserinfoResource(Resource):
@@ -19,6 +19,7 @@ class UserinfoResource(Resource):
         res = {
             "id": user.id,
             "account": user.username,
-            "name": user.name
+            "name": user.name,
+            "avatar": ""
         }
         return max_res(res)

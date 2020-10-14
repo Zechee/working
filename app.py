@@ -26,9 +26,10 @@ from utils.error_handle import *
 for ex in default_exceptions:
     app.register_error_handler(ex, handle_error)
 
-from resourses.users_resource import UsersResource
+
 from resourses.session.login_resource import LoginResource
 from resourses.session.userinfo_resource import UserinfoResource
+from resourses.users_resource import UsersResource
  
 
 api.prefix = '/api'
