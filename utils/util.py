@@ -7,7 +7,7 @@
 
 
 # def max_res_d(result,code='200',errmsg=None):
-def max_res(result, code=200, errmsg=None):
+def max_res(result, code=20000, errmsg=None):
     res = {}
     if errmsg == None:
         res = {'code': code, 'data': result}
