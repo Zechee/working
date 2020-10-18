@@ -30,12 +30,15 @@ for ex in default_exceptions:
 from resourses.session.login_resource import LoginResource
 from resourses.session.userinfo_resource import UserinfoResource
 from resourses.users_resource import UsersResource
- 
+from resourses.logs_resource import LogsResource
+from resourses.logitems_resource import LogitemsResource 
 
 api.prefix = '/api'
 api.add_resource(LoginResource, '/auth/login')
 api.add_resource(UserinfoResource, '/auth/userinfo')
 api.add_resource(UsersResource, '/users', '/users/<int:user_id>')
+
+from routers import api
 
 if __name__ == '__main__':
     app.run()
