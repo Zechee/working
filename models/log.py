@@ -7,7 +7,7 @@ class Log(BaseModel):
     __tablename__ = 'logs'
 
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.Date, nullable=False)
+    date = db.Column(db.String)
     user_id = db.Column(db.Integer, nullable=False)
 
     created_at = db.Column(db.DateTime, server_default=func.now())

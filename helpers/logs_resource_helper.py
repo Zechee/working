@@ -21,7 +21,7 @@ log_list_fields = {
     'list': fields.List(fields.Nested(log_fields))
 }
 
-sortable_fields = ['id', 'date', 'user_id', 'created_at', ]
+sortable_fields = ['id', 'date', 'user_id' ]
 
 log_post_parser = reqparse.RequestParser()
 log_post_parser.add_argument('date', type=str)
